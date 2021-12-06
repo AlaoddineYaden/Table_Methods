@@ -17,7 +17,12 @@ namespace TableauC
             arrInt = new int[taille];
             arrString = new string[taille];
         }
-        // methode inserer int
+        /// <summary>
+        /// inserer un element de type entier au tableau  
+        /// </summary>
+        /// <param name="valeurInt"></param>
+        /// <param name="index"></param>
+        /// <returns>retourner 1 si l'insertion est faite avec sucssee</returns>
         public int insert(int valeurInt, int index)
         {
             if (index < taille && index >= 0)
@@ -29,7 +34,12 @@ namespace TableauC
                 return 0;
             }
         }
-        // methode inserer string
+        /// <summary>
+        /// inserer un element de type string au tableau 
+        /// </summary>
+        /// <param name="valeurString"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public int insert(String valeurString, int index)
         {
             if (index < taille && index >= 0)
@@ -42,8 +52,12 @@ namespace TableauC
                 return 0;
             }
         }
-        // methode supprimer int
-
+       
+        /// <summary>
+        /// methode supprimer un element du tableau de type int
+        /// </summary>
+        /// <param name="valeurInt"></param>
+        /// <returns></returns>
         public int supprimerVal(int valeurInt)
         {
             int i;
@@ -66,8 +80,12 @@ namespace TableauC
             }
             return v;
         }
-        // methode supprimer int avec index
-
+       
+        /// <summary>
+        ///  methode supprimer int avec index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public int supprimerIndex(int index)
         {
             int i;
@@ -91,7 +109,12 @@ namespace TableauC
                 return v;
             }
         }
-        // methode supprimer string
+         
+        /// <summary>
+        /// methode supprimer string
+        /// </summary>
+        /// <param name="valeurString"></param>
+        /// <returns></returns>
         public int supprimerVal(String valeurString)
         {
             int i;
@@ -111,7 +134,12 @@ namespace TableauC
             return v;
         }
 
-        // methode supprimer string avec index
+        
+        /// <summary>
+        /// methode supprimer string avec index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public int supprimerStringIndex(int index)
         {
             int i;
@@ -131,7 +159,12 @@ namespace TableauC
                 return v;
             }
         }
-        // methode recherche valeur int 
+     
+        /// <summary>
+        /// methode recherche valeur int 
+        /// </summary>
+        /// <param name="valeurInt"></param>
+        /// <returns></returns>
         public int racherche(int valeurInt)
         {
             int v = 0;
@@ -145,6 +178,11 @@ namespace TableauC
             }
             return v;
         }
+        /// <summary>
+        /// methode recherche valeur de type string 
+        /// </summary>
+        /// <param name="valeurString"></param>
+        /// <returns></returns>
         public int racherche(String valeurString)
         {
             int v = 0;
@@ -158,6 +196,10 @@ namespace TableauC
             }
             return v;
         }
+        /// <summary>
+        /// une methode pour trier un tableau
+        /// </summary>
+        /// <returns></returns>
         public int Trie()
         {
             int v = 0;
@@ -178,6 +220,10 @@ namespace TableauC
             }
             return v;
         }
+        /// <summary>
+        /// une methode pour faire le symetrie d'un tableau
+        /// </summary>
+        /// <returns></returns>
         public int Symetrie()
         {
             int v = 1;
@@ -197,7 +243,7 @@ namespace TableauC
             int v = 1;
             int z = 0;
 
-            for (int i = 0, j = taille - 1; i < taille / 2 && j > taille / 2; i++, j--)
+            for (int i = 0, j = taille - 1; i < taille / 2 && j >= taille / 2; i++, j--)
             {
                 z = arrInt[i];
                 arrInt[i] = arrInt[j];
@@ -218,21 +264,23 @@ namespace TableauC
         //public table concate(table tab, table tab2)
         //{
         //    int i, j;
-        //    int length =tab.length() + tab2.length();
+        //    int length = tab.length() + tab2.length();
         //    table arrInt = new table(length);
         //    for (i = 0; i < tab.Length; i++)
         //    {
         //        arrInt[i] = tab[i];
         //    }
         //    int z;
-        //    for (j = i,  z = 0; j < taille && z<tab2.Length; j++, z++)
+        //    for (j = i, z = 0; j < taille && z < tab2.Length; j++, z++)
         //    {
         //        arrInt[j] = tab2[z];
         //    }
         //    return this;
         //}
 
-
+        /// <summary>
+        /// cette methode peut afficher le tableau
+        /// </summary>
         public void affiche()
         {
             foreach(int n in arrInt)
