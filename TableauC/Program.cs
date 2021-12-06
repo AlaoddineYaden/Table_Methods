@@ -8,7 +8,7 @@ namespace TableauC
         static void Main(string[] args)
         {
             table tab = new table(7);
-            table tab2 = new table(3);
+            
             tab.insert(2,0);
             tab.insert(5,1);
             tab.insert(1,2);
@@ -16,26 +16,24 @@ namespace TableauC
             tab.insert(1,4);
             tab.insert(5,5);
             tab.insert(2,6);
-            tab2.insert(33,0);
-            tab2.insert(333, 1);
-            tab2.insert(3333, 2);
+            
             tab.affiche();
             Console.WriteLine("sym");
-            Console.WriteLine(tab.Symetrie());
+            Console.WriteLine(tab.Symetrie() + " : on remarque que la table est  symetrique");
             tab.Trie();
             Console.WriteLine("le trie");
             tab.affiche();
             Console.WriteLine("sym");
-            Console.WriteLine(tab.Symetrie());
+            Console.WriteLine(tab.Symetrie()+ " : on remarque que la table n'est pas symetrie");
             Console.WriteLine("rev");
             tab.Reverse();
             tab.affiche();
-            Console.WriteLine("recherche");
+            Console.WriteLine("recherche le nombre 2");
             tab.racherche(2);
             Console.WriteLine("le recherche est " + tab.racherche(2));
-            Console.WriteLine("length");
+            Console.WriteLine("longueur du tableu");
             Console.WriteLine(tab.length());
-            Console.WriteLine("delete");
+            Console.WriteLine("delete l'element qui a index 2 ");
             tab.supprimerIndex(2);
             tab.affiche();
 
